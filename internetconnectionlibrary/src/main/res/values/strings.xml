@@ -1,0 +1,4 @@
+<resources>
+    <string  name="app_name">InternetConnectionLibrary</string>
+    <string name="no_interntet_connection">No Internet Connection</string>
+</resources>
