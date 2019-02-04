@@ -4,14 +4,14 @@ Library to display and monitor connection status
 Library usage
 
 1. Add maven repository to your gradle:
-
+```
 allprojects {
   repositories {
     ...
     maven { url 'https://jitpack.io' }
   }
 }
-
+```
 2. In your build.gradle add :
   implementation 'com.github.PharosProduction:inet-monitor:1.0.0'
 
