@@ -17,24 +17,26 @@ allprojects {
 
 3. Register InetMonitor
 
-    class App : Application() {
-  
-      // Variables
+```
+class App : Application() {
 
-      lateinit var monitor: InetMonitor
+    // Variables
 
-      // Life
+    lateinit var monitor: InetMonitor
 
-      override fun onCreate() {
-          super.onCreate()
-          monitor = InetMonitor(this)
-          monitor.registerReceiver()
-      }
+    // Life
+
+    override fun onCreate() {
+        super.onCreate()
+        monitor = InetMonitor(this)
+        monitor.registerReceiver()
     }
- 
+}
+```
+
  4. In your Activity:
- 
- class MainActivity : AppCompatActivity(), InetMonitor.ConnectionListener {
+```
+class MainActivity : AppCompatActivity(), InetMonitor.ConnectionListener {
     
     // Life
 
@@ -52,3 +54,4 @@ allprojects {
         (application as App).monitor.addConnectionListener(this)
     }
 }
+```
