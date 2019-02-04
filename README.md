@@ -13,8 +13,9 @@ allprojects {
 }
 ```
 2. In your build.gradle add :
+```
   implementation 'com.github.PharosProduction:inet-monitor:1.0.0'
-
+```
 3. Register InetMonitor
 
 ```
