@@ -17,7 +17,7 @@ allprojects {
 
 3. Register InetMonitor
 
-  class App : Application() {
+    class App : Application() {
   
       // Variables
 
@@ -30,7 +30,7 @@ allprojects {
           monitor = InetMonitor(this)
           monitor.registerReceiver()
       }
-  }
+    }
  
  4. In your Activity:
  
