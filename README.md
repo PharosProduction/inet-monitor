@@ -35,7 +35,7 @@ allprojects {
  4. In your Activity:
  
  class MainActivity : AppCompatActivity(), InetMonitor.ConnectionListener {
-
+    
     // Life
 
     override fun listenConnection(isConnected: Boolean) {
