@@ -13,8 +13,8 @@ notifications:  #Optional
         - oleksii.yanushkevych@gmail.com #Add your email address
         - babenkovladimirbmd@gmail.com 
 
-before_install:
-- pip install --user codecov    #Install codecov
+# before_install:
+# - pip install --user codecov    #Install codecov
 
 env:
   global:
@@ -41,8 +41,8 @@ cache:
     - $HOME/.gradle/wrapper/
     - $HOME/.android/build-cache
       
-# before_script:
-#   - chmod +x gradlew
+before_script:
+  - chmod +x gradlew
 
 stages:
   - test
