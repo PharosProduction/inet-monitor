@@ -63,7 +63,7 @@ unitTests:
   stage: test
   script:
     - ./gradlew clean build
-    - ./gradlew test
+    - ./gradlew test --stacktrace
 
 
 # script:
