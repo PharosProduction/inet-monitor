@@ -19,8 +19,8 @@ notifications:  #Optional
 env:
   global:
     - QEMU_AUDIO_DRV=none
-    - ANDROID_TARGET=android-25
-    - ANDROID_ABI=google_apis/armeabi-v7a
+    # - ANDROID_TARGET=android-25
+    # - ANDROID_ABI=google_apis/armeabi-v7a
 
 android:
   components:
@@ -29,9 +29,9 @@ android:
     - tools
     - extra-android-m2repositor
     - build-tools-25.0.2
-    - android-25
+    - android-22
     - add-on
-    - sys-img-armeabi-v7a-google_apis-25
+    - sys-img-armeabi-v7a-android-22
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -45,8 +45,8 @@ cache:
 before_script:
   - chmod +x gradlew      #Grand permissions
   - android list targets
-  - echo no | android create avd --force --name test --target $ANDROID_TARGET --abi $ANDROID_ABI    #Create AVD for given api
-  - emulator -avd test -no-window &   #Start emulator
+  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a   #Create AVD for given api
+  - emulator -avd test -no-audio -no-window &   #Start emulator
 
 script:
     - echo "Travis branch is $TRAVIS_BRANCH"
