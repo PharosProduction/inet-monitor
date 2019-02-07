@@ -18,7 +18,7 @@ notifications:  #Optional
 
 env:
     matrix:
-        - ANDROID_TARGET=android-26 ANDROID_ABI=armeabi-x86   
+        - ANDROID_TARGET=android-26 ANDROID_ABI=google_apis/sys-img-x86   
 android:
   components:
     - tools
@@ -27,8 +27,8 @@ android:
     - extra-android-m2repositor
     - build-tools-26.0.2
     - android-26
-    - sys-img-x86-android-26
-
+    - add-on
+    - sys-img-x86-google_apis-26
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
