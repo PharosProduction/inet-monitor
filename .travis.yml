@@ -22,7 +22,6 @@ env:
     - ANDROID_TARGET=android-25
     - ANDROID_ABI=google_apis/armeabi-v7a
 
-
 android:
   components:
     - tools
@@ -32,7 +31,7 @@ android:
     - build-tools-25.0.2
     - android-25
     - add-on
-    - sys-img-armeabi-v7a-android-25
+    - sys-img-armeabi-v7a-google_apis-25
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
