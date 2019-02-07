@@ -19,7 +19,7 @@ notifications:  #Optional
 env:
   global:
     - QEMU_AUDIO_DRV=none
-    - ANDROID_TARGET=android-28
+    - ANDROID_TARGET=android-25
     - ANDROID_ABI=google_apis/armeabi-v7a
 
 android:
